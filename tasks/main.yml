@@ -1,0 +1,32 @@
+- name: Remove IIQ App Server Container
+  docker_container:
+    name: "{{ iiq_container_name }}"
+    state: absent
+    networks:
+      - name: "{{ network_name }}"
+    network_mode: "{{network_name}}"
+    container_default_behavior: compatibility
+
+- name: Remove Tomcat Log Volume
+  when: remove
+  docker_volume:
+    name: "{{ tomcat_log_volume_name }}"
+    state: absent
+
+- name: Remove Tomcat Work Volume
+  when: remove
+  docker_volume:
+    name: "{{ tomcat_work_volume_name }}"
+    state: absent
+
+- name: Remove Tomcat Catalina Volume
+  when: remove
+  docker_volume:
+    name: "{{ tomcat_catalina_volume_name }}"
+    state: absent
+
+- name: Remove Tomcat Temp Volume
+  when: remove
+  docker_volume:
+    name: "{{ tomcat_temp_volume_name }}"
+    state: absent

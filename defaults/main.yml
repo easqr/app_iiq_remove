@@ -1,0 +1,20 @@
+#Name of the generated docker container.  Usually overriden in the format of <company name>-iiq
+iiq_container_name: sandbox-iiq
+
+#Name of the docker network to attach the generated containers to.  Usually overriden in the format of <company name>_iiq
+network_name: sandbox_iiq
+
+#Name of the docker volume for the tomcat logs.  Usually overriden in the format of <company name>_iiq_tomcat_logs
+tomcat_log_volume_name: sandbox_iiq_tomcat_logs
+
+#Name of the docker volume for the tomcat work directory.  Usually overriden in the format of <company name>_iiq_tomcat_work
+tomcat_work_volume_name: sandbox_iiq_tomcat_work
+
+#Name of the dockder volume for the catalina volume.  Usually overriden in the format of <company name>_iiq_tomcat_catalina
+tomcat_catalina_volume_name: sandbox_iiq_tomcat_catalina
+
+#Name of the docker volume for the tomcat temp directory.  Usually overriden in the format of <company name>_iiq_tomcat_temp
+tomcat_temp_volume_name: sandbox_iiq_tomcat_temp
+
+#Flag to determine if the volumes should also be removed
+remove: false
