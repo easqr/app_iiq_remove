@@ -1,4 +1,4 @@
-# Ansible Role: app_iiq_remove
+# Ansible Role: iiq_app_remove
 Removes an IIQ Docker container
 
 ## Requirements
